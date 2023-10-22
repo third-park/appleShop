@@ -1,0 +1,20 @@
+.nav{
+  background-color: #F1F1F4;
+  width: 100vw;
+  height: 100px;
+  display: flex;
+  flex-flow: row nowrap;
+}
+.navWrap{
+  width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo{}
+.submenu{
+  display: flex;
+  gap: 50px;
+}

@@ -1,0 +1,33 @@
+.mainImg{
+  background: url('/public/bg.png') no-repeat center/cover;
+  width: 100vw;
+  height: 300px;
+}
+.listWrap{
+  display: flex;
+  flex-flow: row nowrap;
+}
+ul:has(.item){
+  width: 100vw;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  background-color: #F4F4F4;
+  padding: 30px;
+}
+.item{
+  border: 1px solid #FFF;
+  background-color: #fff;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content:flex-start;
+  align-items: center;
+}
+.item>h4{
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.item>p{
+  margin-bottom: 30px;
+}
