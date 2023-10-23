@@ -13,7 +13,12 @@
   justify-content: space-between;
   align-items: center;
 }
-.logo{}
+.logo>a{
+}
+a{
+  text-decoration: none;
+  color: #111;
+}
 .submenu{
   display: flex;
   gap: 50px;
