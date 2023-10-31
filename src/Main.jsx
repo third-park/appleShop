@@ -5,8 +5,6 @@ import ProductList from "./product/ProductList.jsx";
 import { useNavigate } from "react-router-dom";
 
 const Main = ({shoes}) => {
-  // const [shoes, setshoes] = useState(data);
-
   const navigate = useNavigate();
   const naviLocation = (productId) => {
     navigate(`/detail/${productId}`);

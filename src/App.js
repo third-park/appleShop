@@ -10,6 +10,7 @@ import About from "./about/About";
 import Member from "./about/member";
 import Company from "./about/company";
 import data from "./data";
+import NotFound from "./NotFound";
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
@@ -34,7 +35,7 @@ function App() {
           <Route path="member" element={<Member />}/>
           <Route path="company" element={<Company />}/>
         </Route>
-        <Route path="*" element={ <div>없는페이지</div> } />
+        <Route path="*" element={ <NotFound /> } />
       </Routes>
     </>
   );
