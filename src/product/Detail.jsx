@@ -7,19 +7,26 @@ function Detail({ shoes }) {
   const navigate = useNavigate(); 
   const {productId} = useParams();
   let findProduct = shoes.find((e)=>e.id === +productId)
-  const divRef = useRef(null);
   
   const [num, setNum] = useState('');
+  const [alert, setAlert] = useState(true)
 
   useEffect(()=>{
     if(isNaN(num) === true){
-      alert('숫자작성해주')
+      prompt('숫자작성해주')
     }
-
-    setTimeout(()=>{
-      divRef.current.style.display = "none";
-    },2000)
   },[num])
+
+  useEffect(()=>{
+    const stateCheck = setTimeout(()=>{
+      setAlert(false)
+    },2000)
+
+    return () => {
+      clearTimeout(stateCheck);
+    }
+  },[])
+
   
   if(!findProduct){
     return <NotFound />
@@ -40,7 +47,7 @@ function Detail({ shoes }) {
             <button className="btn btn-danger">주문하기</button>
           </div>
         </div>
-        <div className={style.sale} ref={divRef}>깜짝세일</div>
+        {alert === true ? <div className={style.sale}>깜짝세일</div> : null}
       </div>
     </>
   );

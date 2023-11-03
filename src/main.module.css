@@ -6,16 +6,18 @@
 .listWrap{
   display: flex;
   flex-flow: row nowrap;
-}
-ul:has(.item){
-  width: 100vw;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-evenly;
   background-color: #F4F4F4;
   padding: 30px;
+  width: 100vw;
+}
+ul:has(.item){
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  gap: 20px;
 }
 .item{
+  width: calc(100% / 3.3);
   border: 1px solid #FFF;
   background-color: #fff;
   display: flex;
@@ -30,4 +32,12 @@ ul:has(.item){
 }
 .item>p{
   margin-bottom: 30px;
+}
+.addButton{
+  display: block;
+  width:fit-content;
+  margin: 10px auto;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
 }

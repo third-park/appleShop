@@ -17,7 +17,7 @@ const GlobalStyle = createGlobalStyle`
 `;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
 
 function App() {
-  const [shoes, setshoes] = useState(data);
+  const [shoes, setShoes] = useState(data);
 
   return (
     <>
@@ -26,7 +26,7 @@ function App() {
         <Route path="/" element={
             <>
               <Nav />
-              <Main shoes={shoes}/>
+              <Main shoes={shoes} setShoes={setShoes}/>
             </>
           }
         />
