@@ -11,6 +11,8 @@ import Member from "./about/member";
 import Company from "./about/company";
 import data from "./data";
 import NotFound from "./NotFound";
+import Tab from "./product/Tab";
+
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
@@ -30,7 +32,13 @@ function App() {
             </>
           }
         />
-        <Route path="/detail/:productId" element={<><Nav/><Detail shoes={shoes}/></>} />
+        <Route path="/detail/:productId" element={
+        <>
+          <Nav/>
+          <Detail shoes={shoes} />
+          <Tab />
+        </>
+        } />
         <Route path="/about" element={<><Nav/><About/></>}>
           <Route path="member" element={<Member />}/>
           <Route path="company" element={<Company />}/>

@@ -31,7 +31,6 @@ function Detail({ shoes }) {
   if(!findProduct){
     return <NotFound />
   }
-
   return (
     <>
       <div className={style.container}>
