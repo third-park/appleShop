@@ -12,6 +12,7 @@ import Company from "./about/company";
 import data from "./data";
 import NotFound from "./NotFound";
 import Tab from "./product/Tab";
+import TabContents from "./product/TabContents";
 
 
 const GlobalStyle = createGlobalStyle`
@@ -20,6 +21,9 @@ const GlobalStyle = createGlobalStyle`
 
 function App() {
   const [shoes, setShoes] = useState(data);
+
+  const [tab, setTab] = useState(0);
+
 
   return (
     <>
@@ -36,7 +40,8 @@ function App() {
         <>
           <Nav/>
           <Detail shoes={shoes} />
-          <Tab />
+          <Tab setTab={ setTab } />
+          <TabContents tab={tab} />
         </>
         } />
         <Route path="/about" element={<><Nav/><About/></>}>
