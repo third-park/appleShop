@@ -13,6 +13,7 @@ import data from "./data";
 import NotFound from "./NotFound";
 import Tab from "./product/Tab";
 import TabContents from "./product/TabContents";
+import Cart from "./Cart/Cart";
 
 
 const GlobalStyle = createGlobalStyle`
@@ -36,6 +37,7 @@ function App() {
             </>
           }
         />
+
         <Route path="/detail/:productId" element={
         <>
           <Nav/>
@@ -44,10 +46,14 @@ function App() {
           <TabContents tab={tab} />
         </>
         } />
-        <Route path="/about" element={<><Nav/><About/></>}>
-          <Route path="member" element={<Member />}/>
-          <Route path="company" element={<Company />}/>
+
+        <Route path="/about" element={ <><Nav/><About/></>} >
+          <Route path="member" element={ <Member />} />
+          <Route path="company" element={ <Company />} />
         </Route>
+
+        <Route path="/cart" element={ <><Nav /><Cart /></> } />
+
         <Route path="*" element={ <NotFound /> } />
       </Routes>
     </>

@@ -1,0 +1,30 @@
+table{
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+thead{
+  width: 100vw;
+  border-bottom: 2px solid #000 !important;
+}
+.tableContents, .tableTitle{
+  width: clamp(60%, 80%, 1280px);
+  margin: 0 auto;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  flex-grow: 1;
+  align-items: center;
+}
+.tableTitle{
+  font-weight: 700;
+}
+.tableContents{
+}
+
+th, td{
+  width: 100%;
+  text-align: center;
+}
